@@ -1,1 +1,60 @@
+/* Reset e Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #FFB6C1 0%, #F5F5DC 100%); min-height: 100vh; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #000; }
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); text-align: center; margin-bottom: 1rem; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); text-align: center; margin-bottom: 2rem; color: #FF69B4; }
+h3 { font-family: 'Poppins', sans-serif; font-size: 1.3rem; margin-bottom: 0.5rem; color: #000; }
+p { margin-bottom: 1rem; }
+button, .cta-primary, .cta-secondary { font-family: 'Poppins', sans-serif; font-weight: 600; background: #FF69B4; color: #fff; padding: 1rem 2rem; border: none; border-radius: 50px; text-decoration: none; display: inline-block; cursor: pointer; transition: all 0.3s; font-size: 1.1rem; }
+button:hover, .cta-primary:hover, .cta-secondary:hover { background: #FF1493; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(255,105,180,0.3); }
 
+/* Hero */
+#hero { background: linear-gradient(to bottom, #F5F5DC, #D2B48C); padding: 4rem 0; text-align: center; }
+.subtitulo { font-size: clamp(1.1rem, 3vw, 1.4rem); max-width: 600px; margin: 0 auto 2rem; }
+.ctas { margin: 2rem 0; }
+.ctas p { color: #666; margin-top: 1rem; }
+.hero-image { margin-top: 2rem; }
+.hero-image img { max-width: 300px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+
+/* Seções Gerais */
+section { padding: 4rem 0; }
+section:nth-child(even) { background: rgba(255,255,255,0.8); }
+ul { list-style: none; display: grid; gap: 1rem; max-width: 800px; margin: 0 auto; }
+ul li { background: #fff; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; }
+
+/* Módulos e Benefícios */
+.modulos-grid, .beneficios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+.modulo, .beneficio { background: #fff; padding: 2rem; border-radius: 20px; text-align: center; box-shadow: 0 10px 30px rgba(255,105,180,0.2); transition: transform 0.3s; }
+.modulo:hover, .beneficio:hover { transform: translateY(-5px); }
+.modulos-cta { text-align: center; font-size: 1.2rem; color: #FF69B4; }
+
+/* Depoimentos */
+.depoimentos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+blockquote { background: linear-gradient(to right, #FFB6C1, #F5F5DC); padding: 2rem; border-radius: 20px; text-align: center; font-style: italic; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+cite { display: block; margin-top: 1rem; font-weight: 500; color: #FF69B4; }
+
+/* Infos e FAQ */
+#infos ul li { background: none; text-align: left; padding-left: 2rem; position: relative; }
+#infos ul li::before { content: '✓'; position: absolute; left: 0; color: #FF69B4; font-weight: bold; }
+.faq-item { background: #fff; margin-bottom: 1rem; padding: 1.5rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); cursor: pointer; }
+.faq-item h3 { color: #FF69B4; }
+
+/* Form */
+#form { background: linear-gradient(to bottom, #FF69B4, #FFB6C1); color: #fff; }
+#form h2 { color: #fff; }
+#form input, #form textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; border: none; border-radius: 10px; font-family: inherit; }
+#form button { width: 100%; max-width: 400px; margin: 0 auto; display: block; }
+
+/* Urgência */
+#urgencia { background: #000; color: #fff; text-align: center; padding: 3rem 0; }
+#urgencia h2 { color: #FF69B4; }
+
+/* Responsivo Mobile-First */
+@media (max-width: 768px) {
+    .container { padding: 0 15px; }
+    section { padding: 2rem 0; }
+    .modulos-grid, .beneficios-grid { grid-template-columns: 1fr; }
+    .depoimentos-grid { grid-template-columns: 1fr; }
+}
